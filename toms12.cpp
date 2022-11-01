@@ -209,6 +209,35 @@ void MultySet::print() const
 
 // harc 5
 
+#include <iostream>
+#include <stack>
+#include <string>
+
+int main()
+{
+    std::stack<char> s;
+    std::stack<char> res;
+    
+    std::string tox;
+    std::cin >> tox;
+    
+    for(int i = 0; i < tox.size(); ++i)
+    {
+        s.push(tox[i]);
+        res.push(tox[tox.size() - i - 1]);
+    }
+    
+    if(res == s)
+    {
+        std::cout << "tox is polindrome" << std::endl;
+    }
+    else
+    {
+        std::cout << "tox is not polindrome" << std::endl;
+    }
+    
+    return 0;
+}
 
 
 
