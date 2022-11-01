@@ -154,7 +154,6 @@ void Polinom::print() const
 
 
 #include <iostream>
-#include <vector>
 #include <queue>
 
 int main()
