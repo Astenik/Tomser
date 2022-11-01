@@ -194,12 +194,6 @@ void MultySet::clear()
     }
 }
 
-
-
-// 5 harc
-
-
-
 void MultySet::print() const
 {
     Node* ptr = m_head;
@@ -210,3 +204,11 @@ void MultySet::print() const
     }
     std::cout << std::endl;
 }
+
+
+
+// harc 5
+
+
+
+
