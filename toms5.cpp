@@ -151,3 +151,53 @@ void Polinom::print() const
 
 
 // harc 5
+
+
+#include <iostream>
+#include <vector>
+#include <queue>
+
+int main()
+{
+    std::queue<int> Q1, Q2;
+    
+    for(int i = 1; i < 10; i += 2)
+    {
+        Q1.push(i);
+        std::cout << Q1.back() << " ";
+    }
+    for(int i = 0; i< 10; i += 2)
+    {
+        Q1.push(i);
+        std::cout <<Q1.back() << " ";
+    }
+    
+    std::cout << std::endl;
+    
+    while(!Q1.empty())
+    {
+        if(Q2.front() && Q2.front() < Q1.front())
+        {
+            Q2.push(Q1.front());
+        }
+        else if(Q2.front() && Q2.front() > Q1.front())
+        {
+            int k = Q2.front();
+            Q2.pop();
+            Q2.push(Q1.front());
+            Q2.push(k);
+        }
+        else
+        {
+            Q2.push(Q1.front());
+        }
+        Q1.pop();
+    }
+    while(!Q2.empty())
+    {
+        std::cout << Q2.front() << " ";
+        Q2.pop();
+    }
+    
+    return 0;
+}
